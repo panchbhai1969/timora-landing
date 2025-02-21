@@ -22,13 +22,13 @@ export default function Home() {
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="#how-it-works">
             How It Works
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#pricing">
+          {/* <Link className="text-sm font-medium hover:underline underline-offset-4" href="#pricing">
             Pricing
-          </Link>
+          </Link> */}
         </nav>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+        <section className="w-full py-8 md:py-16 lg:py-24 xl:py-36">
           <div className="container px-4 md:px-6">
             <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
               <div className="flex flex-col justify-center space-y-4">
@@ -53,15 +53,20 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="flex items-center justify-center">
-                <Image
-                  alt="Hero Image"
+                <div className="flex items-center justify-center">
+                <video
                   className="aspect-video overflow-hidden rounded-xl object-cover object-center"
-                  height="310"
-                  src="/placeholder.svg?height=310&width=550"
-                  width="550"
-                />
-              </div>
+                  height="410"
+                  width="650"
+                  controls={false}
+                  autoPlay = {true}
+                  loop
+                  muted={true}
+                >
+                  <source src="pv1.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                </div>
             </div>
           </div>
         </section>
@@ -71,9 +76,9 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <FeatureCard
                 icon={<Zap className="h-10 w-10" />}
-                title="AI-Powered Zoom 🔍"
+                title="AI-Powered Zoom Director 🔍🎬"
                 description="Automatically zoom and focus on the most important parts of your video."
-                gifSrc="/placeholder.svg?height=250&width=400"
+                gifSrc="/pv1.mp4"
               />
               <FeatureCard
                 icon={<Type className="h-10 w-10" />}
@@ -114,13 +119,13 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <StepCard
                 number={1}
-                title="Upload Your Video 📤"
+                title="Record with CutStudio 📤"
                 description="Simply drag and drop your video file into our app."
               />
               <StepCard
                 number={2}
-                title="Choose AI Features 🤖"
-                description="Select the AI-powered features you want to apply to your video."
+                title="Check the preview 🤖"
+                description="AI-powered features are auto applied to your video."
               />
               <StepCard
                 number={3}
@@ -141,9 +146,11 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <Link href="https://play.cutstudio.io">
                   <Button size="lg">
                     Try It Now <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
+                </Link>
                 </div>
               </div>
               <div className="flex items-center justify-center">
@@ -173,10 +180,14 @@ export default function Home() {
                 </p>
               </div>
               <div className="space-x-4">
+              <Link href="https://play.cutstudio.io">
                 <Button size="lg">Get Started for Free</Button>
+              </Link>
+              <Link href="#features">
                 <Button size="lg" variant="outline">
                   Watch Demo
                 </Button>
+              </Link>
               </div>
             </div>
           </div>
@@ -213,8 +224,17 @@ function FeatureCard({ icon, title, description, gifSrc }: FeatureCardProps) {
         <p className="text-gray-500 dark:text-gray-400">{description}</p>
       </div>
       <div className="flex-1 order-1 lg:order-2">
-        <div className="relative w-full aspect-video rounded-xl overflow-hidden">
+        {/* <div className="relative w-full aspect-video rounded-xl overflow-hidden">
           <Image src={gifSrc || "/placeholder.svg"} alt={`${title} demo`} fill className="object-cover" />
+        </div> */}
+        <div className="relative w-full aspect-video rounded-xl overflow-hidden">
+          <video
+            className="object-cover"
+            src={gifSrc || "/placeholder.svg"}
+            autoPlay
+            loop
+            muted
+          />
         </div>
       </div>
     </div>
