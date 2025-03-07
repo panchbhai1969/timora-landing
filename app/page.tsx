@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Zap, Type, Volume2, Globe, BookOpen, Play } from "lucide-react"
+import { ArrowRight, Zap, Type, Volume2, Globe } from "lucide-react"
 
 export default function Home() {
   return (
@@ -84,21 +84,21 @@ export default function Home() {
                 icon={<Type className="h-10 w-10" />}
                 title="Smart Subtitles 🗨️"
                 description="Generate accurate subtitles in multiple languages with a single click."
-                gifSrc="/placeholder.svg?height=250&width=400"
+                gifSrc="/subtitle.mp4"
               />
               <FeatureCard
                 icon={<Volume2 className="h-10 w-10" />}
-                title="Audio Enhancement 🎵"
-                description="Improve audio quality and change voices with AI technology."
-                gifSrc="/placeholder.svg?height=250&width=400"
+                title="Seamless Audio Language Change 🎵"
+                description="One click audio change with voice options powered by AI technology."
+                gifSrc="/language-audio.mp4"
               />
               <FeatureCard
                 icon={<Globe className="h-10 w-10" />}
                 title="Multi-Language Support 🌍"
                 description="Edit and create content for a global audience with ease."
-                gifSrc="/placeholder.svg?height=250&width=400"
+                gifSrc="/translate.mp4"
               />
-              <FeatureCard
+              {/* <FeatureCard
                 icon={<BookOpen className="h-10 w-10" />}
                 title="Tutorial Generation 📚"
                 description="Automatically create step-by-step tutorials from your videos."
@@ -106,10 +106,10 @@ export default function Home() {
               />
               <FeatureCard
                 icon={<ArrowRight className="h-10 w-10" />}
-                title="One-Click Editing ⚡"
-                description="Streamline your workflow with intelligent, one-click editing options."
+                title="Instant link to share your creation ⚡"
+                description="Get a custom link to share your video and control it's visibility"
                 gifSrc="/placeholder.svg?height=250&width=400"
-              />
+              /> */}
             </div>
           </div>
         </section>
@@ -159,12 +159,13 @@ export default function Home() {
                     alt="Video Thumbnail"
                     className="rounded-xl object-cover"
                     fill
-                    src="/placeholder.svg?height=310&width=550"
+                    src="/sample.jpeg"
+                    title="nicolas_707"
                   />
-                  <Button size="icon" variant="secondary" className="absolute inset-0 m-auto h-12 w-12 rounded-full">
+                  {/* <Button size="icon" variant="secondary" className="absolute inset-0 m-auto h-12 w-12 rounded-full">
                     <Play className="h-4 w-4" />
                     <span className="sr-only">Play video</span>
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </div>
